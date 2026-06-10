@@ -1,0 +1,364 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #111625;
+}
+
+/* ==========================================================================
+   1. BARRA ULTRA SUPERIOR (Links de Governança)
+   ========================================================================== */
+.top-mini-bar {
+    background-color: #0b111e;
+    padding: 6px 4%;
+    text-align: right;
+}
+
+.top-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+.top-links a:hover {
+    color: #ffd116;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO PRINCIPAL
+   ========================================================================== */
+.main-header {
+    background-color: #0056f3; /* Azul vibrante da Seleção */
+    height: 70px;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 2%;
+}
+
+/* Efeito diagonal da Logo */
+.logo-box {
+    background: linear-gradient(115deg, #ffd116 48%, transparent 49%);
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.cbf-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #003399;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.logo-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Menu de Navegação */
+.main-nav {
+    margin-left: 140px; /* Abre espaço por causa da logo absoluta */
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-right: 25px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #ffd116; /* Destaque em amarelo */
+}
+
+/* Busca e Perfil */
+.search-profile {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    margin-right: 15px;
+}
+
+.search-box input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 35px 8px 15px;
+    color: #ffffff;
+    width: 220px;
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. BANNER PRINCIPAL (Hero)
+   ========================================================================== */
+.hero-banner {
+    position: relative;
+    height: 380px;
+    background-image: url('https://picsum.photos/1920/1080?random=10'); /* Imagem de exemplo ao fundo */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 30%, rgba(0, 86, 243, 0.3) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4% 30px 4%;
+}
+
+.hero-content h1 {
+    font-size: 34px;
+    font-weight: bold;
+    max-width: 80vh;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Rodapé Interno do Slider */
+.hero-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+.slider-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 40px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+}
+
+.indicator.active {
+    background-color: #ffd116; /* Indicador ativo amarelo */
+}
+
+.slider-news-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.slider-news-links a:hover {
+    color: #ffffff;
+}
+
+.arrow-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.arrow-btn:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* ==========================================================================
+   4. SEÇÃO DE DESTAQUES (Cards)
+   ========================================================================== */
+.content-wrapper {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 4%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    color: #111625;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.arrow-small {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #0056f3;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Grade de Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.card-image-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 180px;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.news-card:hover .card-image-box img {
+    transform: scale(1.05);
+}
+
+/* Etiqueta Amarela idêntica à imagem */
+.badge-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd116;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 12px;
+    letter-spacing: 0.3px;
+}
+
+.card-info {
+    padding: 15px 0;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    color: #111625;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MÍNIMA
+   ========================================================================== */
+@media (max-width: 900px) {
+    .main-nav, .slider-news-links, .top-mini-bar {
+        display: none; /* Simplifica no mobile */
+    }
+    .logo-box {
+        position: relative;
+    }
+    .hero-content h1 {
+        font-size: 24px;
+    }
+}
